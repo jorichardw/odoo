@@ -25,7 +25,7 @@ RUN useradd -m -d /opt/odoo -U -r -s /bin/bash odoo
 USER odoo
 WORKDIR /opt/odoo
 
-RUN git clone --depth 1 --branch 18.0 https://github.com/odoo/odoo.git .
+RUN git clone https://github.com/odoo/odoo.git .
 
 RUN python3 -m pip install --upgrade pip setuptools wheel
 RUN pip3 install -r requirements.txt
